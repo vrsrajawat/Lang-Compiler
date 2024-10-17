@@ -1,0 +1,18 @@
+[build]
+  publish = "build"  # The folder where your built files are located (e.g., "build" for React apps)
+  command = "npm run build"  # Command to build your project
+
+[dev]
+  command = "npm start"  # Command to start your local development server
+  port = 3000  # Port for your development server
+
+[[redirects]]
+  from = "/old-path"
+  to = "/new-path"
+  status = 301  # Permanent redirect
+  force = true  # Whether to force the redirect
+
+[[headers]]
+  for = "/*"  # Apply to all routes
+  [headers.values]
+    X-Frame-Options = "DENY"  # Security header example
